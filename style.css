@@ -1,0 +1,939 @@
+/*
+Theme Name: TechBook
+Theme URI: 
+Author: 
+Author URI: 
+Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain:  techbook
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: 0
+}
+
+html {
+	-webkit-font-smoothing: antialiased
+}
+
+body {
+	margin: 0;
+	padding: 0 0;
+	font-weight: normal;
+	background: #FFFFFF;	/*background:#fff url(../images/bg3.jpg) repeat-y left top;*/
+
+	/*background-size:100% auto;*/
+	font-family: 'Fira Sans'/*, sans-serif*/ ;
+	color: #2F2E41;
+	line-height: 1.375;/*22*/
+
+	/*font-size:1.000em;/*16*/*/
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	-moz-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 20px 0;
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 500;
+	color: #2d2d2d;
+}
+
+h2 {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 25px;
+	line-height: 40px;
+	font-weight: 600;
+}
+
+h4 {
+	font-family: 'Fira Sans', sans-serif;
+	line-height: 25px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+h5 {
+	font-family: 'Fira Sans', sans-serif;
+	line-height: 1.181818181818182em;
+	font-size: 22px;
+}
+
+a {
+	font-family: 'Fira Sans', sans-serif;
+	color: #007bff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	display: inline-block;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */
+}
+
+a:hover, a:focus, a:visited {
+	text-decoration: none
+}
+
+a:hover {
+	color: #0056b3
+}
+
+p {
+	margin: 5px 0px;
+	line-height: 26px;
+	font-size: 15px;
+	color: #0a0a0a;
+}
+
+.margin-tb30, .margin-tb30 [class*='col-'] {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.logo {
+	width: 148.55px;
+	height: 103.01px;
+}
+
+.logo img {
+	width: 100%;
+	height: auto;
+}
+
+.collapse > ul {
+	position: relative;
+	margin-left: 20px;
+	width: 100%;
+}
+
+.collapse > ul > li:last-child {
+	position: absolute;
+	right: 0;
+	margin: 0;
+}
+
+.collapse > ul > li > a {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #2F2E41;
+	margin: 0 10px;
+}
+
+.header_section {
+	position: relative;
+	padding-bottom: 80px;
+}
+
+.img1 {
+	position: absolute;
+	left: -30px;
+	top: 670px;
+}
+
+.img3 {
+	position: absolute;
+	left: 53px;
+	top: 721.38px;
+	background: #FFFFFF;
+	border-radius: 50%;
+}
+
+.img4 {
+	position: absolute;
+	left: 27px;
+	top: 684.73px;
+	box-sizing: border-box;
+}
+
+.img5 {
+	position: absolute;
+	left: 0px;
+	top: 458.2px;
+	box-sizing: border-box;
+}
+
+.img6 {
+	position: absolute;
+	left: 510px;
+	top: 490px;
+}
+
+.img7 {
+	position: absolute;
+	left: 791px;
+	top: 0px;
+}
+
+.img8 {
+	position: absolute;
+	left: 446px;
+	top: 24.36px;
+	transform: rotate(4.15deg);
+}
+
+.header_section h2 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 70px;
+	letter-spacing: -1px;
+	color: #151515;
+}
+
+.header_section h2 > span {
+	color: #56C8E7;
+}
+
+.header_section h2 > p {
+	margin: 0;
+	padding: 0;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	color: #222222;
+	opacity: 0.7;
+}
+
+.header_section button {
+	margin-top: 50px;
+	margin-bottom: 90px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background: #56C8E7;
+	border-radius: 50px;
+	padding: 8px 20px;
+	border: none;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.header_section a {
+	margin-top: 90px;
+	margin-bottom: 15px;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #414141;
+	opacity: 0.8;
+}
+
+.header_section h3 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #414141;
+	margin-bottom: 50px;
+}
+
+.header_section p {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 20px;
+	letter-spacing: -1px;
+	color: #414141;
+	margin-bottom: 20px;
+}
+
+.founder {
+	padding: 100px;
+	background: #56C8E7;
+	position: relative;
+}
+
+.founder1 {
+	position: absolute;
+	left: 743.39px;
+	top: 75px;
+}
+
+.founder2 {
+	position: absolute;
+	left: 824px;
+	top: 84px;
+	z-index: 9;
+}
+
+.founder3 {
+	position: absolute;
+	left: 897px;
+	top: 1001px;
+}
+
+.founder4 {
+	position: absolute;
+	right: 0px;
+	top: 655px;
+}
+
+.founder5 {
+	position: absolute;
+	left: 936px;
+	top: 730px;
+}
+
+.founder6 {
+	position: absolute;
+	left: 748px;
+	top: 565px;
+}
+
+.founder7 {
+	position: absolute;
+	left: 817px;
+	top: 1010px;
+}
+
+.founder8 {
+	position: absolute;
+	left: 800px;
+	bottom: 15pc;
+}
+
+.founder9 {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+}
+
+.founder10 {
+	position: absolute;
+	top: 1030px;
+	left: 675px;
+}
+
+.founder11 {
+	position: absolute;
+	top: 322px;
+	left: 27px;
+}
+
+.founder12 {
+	position: absolute;
+	top: 1387px;
+	left: 535px;
+}
+
+.founder h5 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #FAFAFA;
+}
+
+.founder h3 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #FAFAFA;
+}
+
+.founder h4 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 32px;
+	color: #FAFAFA;
+	margin-bottom: 20px;
+}
+
+.founder p {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: -1px;
+	color: #FFFFFF;
+	margin-bottom: 50px;
+}
+
+.founder hr {
+	width: 50%;
+	margin: 25px 0;
+	background-color: #fff;
+	height: 2px;
+}
+
+.text1 {
+	width: 65%;
+}
+
+.text2 {
+	margin-left: 35%;
+	width: 65%;
+	text-align: right;
+}
+
+.text3 {
+	font-weight: bold !important;
+}
+
+.text4 {
+	line-height: 40px !important;
+}
+
+.author {
+	position: relative;
+	width: 485px;
+	height: 500px;
+}
+
+.author img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 55px;
+	border-radius: 50%;
+}
+
+.founder h6 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 32px;
+	color: #FAFAFA;
+	margin-top: 74px;
+	margin-left: 219px;
+}
+
+.services {
+	padding: 100px 0;
+	background-color: #FAF7AC;
+	position: relative;
+}
+
+.service1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.service2 {
+	position: absolute;
+	top: 5%;
+	right: 6%;
+}
+
+.service3 {
+	position: absolute;
+	bottom: 10%;
+	right: 6%;
+}
+
+.service4 {
+	position: absolute;
+	bottom: 7%;
+	right: 3%;
+}
+
+.services .mb-20 {
+	margin-bottom: 20px;
+}
+
+.services h5 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #414141;
+	opacity: 0.8;
+}
+
+.services h3 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #414141;
+}
+
+.services hr {
+	width: 50%;
+	margin: 25px 0;
+	background-color: #414141;
+	height: 2px;
+}
+
+.services p {
+	width: 70%;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: -1px;
+	color: #414141;
+}
+
+.approach {
+	background-color: #fff;
+	position: relative;
+	padding: 100px 0;
+}
+
+.approach1 {
+	position: absolute;
+	top: 8%;
+	left: 0px;
+}
+
+.approach2 {
+	position: absolute;
+	top: 3%;
+	left: 1%;
+}
+
+.approach h5 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #000000;
+}
+
+.approach hr {
+	width: 40%;
+	margin: 25px 0;
+	background-color: #414141;
+	height: 2px;
+}
+
+.approach .mt-100 {
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+.approach p {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: -1px;
+	color: #000000;
+}
+
+.approach h6 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #141517;
+	opacity: 0.8;
+}
+
+.articles {
+	background-color: #fff;
+}
+
+.articles .articleImg {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+.articles .articleImg img {
+	width: 100%;
+	height: auto;
+}
+
+.card-body {
+	border: none;
+	border-radius: .25rem .25rem 0rem 0rem;
+	box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.25);
+	padding: 2rem;
+}
+
+.card-body h5 {
+	margin-right: 10px;
+	margin-top: -20px;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.card-body h5 span {
+	margin: 0px 20px;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 24px;
+	text-align: right;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #181A19;
+	opacity: 0.5;
+}
+
+.card-body h5 span:first-child {
+	margin-left: 30px;
+}
+
+.card-body button {
+	display: block;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	padding: 10px 40px;
+	border: none;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	margin-top: 20px;
+	color: #fff;
+	transition: 0.6s;
+	margin-left: 65%;
+}
+
+.card-body .bg1 {
+	background-color: #56C8E7;
+}
+
+.card-body .bg2 {
+	background-color: #00B7A8;
+}
+
+.blog_header {
+	padding-top: 100px;
+	padding-bottom: 80px;
+	position: relative;
+}
+
+.blog_header .blog_header1 {
+	position: absolute;
+	right: 0;
+	bottom: 10%;
+	z-index: -5;
+}
+
+.blog_header h2 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #2F2E41;
+}
+
+.blog_header hr {
+	height: 1px;
+	background-color: #56C8E7;
+	z-index: 5;
+}
+
+.blog_header h4 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 24px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #676767;
+}
+
+.blog_header button {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background: #fff;
+	border-radius: 50px;
+	padding: 10px 25px;
+	border: none;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #2F2E41;
+	transition: 0.6s;
+	margin: 0 36px;
+}
+
+.blog_header button:hover {
+	color: #fff;
+	background-color: #56C8E7;
+}
+
+.blog_body {
+	z-index: 1;
+	position: relative;
+	background-color: #56C8E7;
+	padding: 100px 0;
+}
+
+.blog_body .blogbody1 {
+	position: absolute;
+	left: 0;
+	top: -5%;
+}
+
+.blog_body .blogbody2 {
+	position: absolute;
+	left: 0;
+	top: 10%;
+	z-index: -1;
+}
+
+.blog_body .blogbody3 {
+	position: absolute;
+	right: 0;
+	z-index: -1;
+}
+
+.blog_body .blogbody4 {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+
+.blog_body .blogPost {
+	z-index: 5;
+}
+
+.blog_body .blogPost .col-md-12 {
+	background-color: #fff;
+	padding: 25px;
+	margin-bottom: 40px;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+}
+
+.blog_body .blogPost .postImg {
+	width: 90%;
+	height: 70%;
+}
+
+.blog_body .blogPost .postImg img {
+	width: 100%;
+	height: auto;
+}
+
+.blog_body .blogPost h4 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #000000;
+	margin-bottom: 0;
+}
+
+.blog_body .blogPost h6 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 50px;
+	letter-spacing: 5px;
+	color: #524B4B;
+}
+
+.blog_body .blogPost h6::before {
+	display: inline-block;
+	content: '';
+	height: 1px;
+	width: 35%;
+	background-color: #524B4B;
+	vertical-align: middle;
+	margin-right: 10%;
+}
+
+.blog_body .blogPost p {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 5px;
+	color: #000000;
+}
+
+.postMainBody {
+	background-color: #fff;
+}
+
+.postMainBody .postImage {
+	width: 100%;
+	height: 400px;
+}
+
+.postMainBody .postImage img {
+	width: 100%;
+	height: 100%;
+}
+
+.postMainBody .postBody {
+	position: relative;
+	padding: 100px 0;
+	overflow: hidden;
+}
+
+.postMainBody .postBody .singl1 {
+	position: absolute;
+	top: -7%;
+	left: -5%;
+}
+
+.postMainBody .postBody .singl2 {
+}
+
+.postMainBody .postBody .singl3 {
+}
+
+.postMainBody .postBody .singl4 {
+}
+
+.postMainBody .postBody .singl5 {
+}
+
+.postMainBody .postBody .singl6 {
+}
+
+.postMainBody .postBody .singl7 {
+}
+
+footer {
+	background-color: #56C8E7;
+	padding: 50px 0;
+	position: relative;
+}
+
+.footerimg1 {
+	position: absolute;
+	top: -30%;
+	right: 30%;
+}
+
+.footerimg2 {
+	position: absolute;
+	right: 21%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.footerimg3 {
+	position: absolute;
+	right: 2%;
+	bottom: 6%;
+}
+
+footer h3 {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+	color: #F4F4F4;
+}
+
+footer p {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 30px;
+	letter-spacing: -1px;
+	color: #F4F4F4;
+}
