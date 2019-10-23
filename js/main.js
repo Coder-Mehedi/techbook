@@ -1,0 +1,1 @@
+$(".pct").length&&(window.pageYOffset<=0?$(".pct").addClass("none"):$(".pct").removeClass("none"),$(".pct").html(parseInt(window.pageYOffset/($(document).height()-window.innerHeight)*100))),window.pageYOffset>0?

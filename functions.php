@@ -2,6 +2,9 @@
 function techbook_enqueue_assets(){
 	//css enqueue
 	wp_enqueue_style("bootstrap", get_template_directory_uri()."/css/bootstrap.min.css",array(), '4.3.1', 'all');
+
+	wp_enqueue_style("google-fonts", "https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+
 	wp_enqueue_style("style", get_stylesheet_uri());
 
   //javascript enqueue
