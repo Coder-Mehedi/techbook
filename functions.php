@@ -1,4 +1,5 @@
 <?php
+require_once('acf_query.php');
 function techbook_enqueue_assets(){
 	//css enqueue
 	wp_enqueue_style("bootstrap", get_template_directory_uri()."/css/bootstrap.min.css",array(), '4.3.1', 'all');
@@ -9,7 +10,7 @@ function techbook_enqueue_assets(){
 
   //javascript enqueue
 	wp_enqueue_script("bootstrap", get_template_directory_uri()."/js/bootstrap.min.js",array('jquery'), 1.0, true);
-	wp_enqueue_script("customjs", get_template_directory_uri()."/js/main.js", array(), 1.0, true);
+	wp_enqueue_script("customjs", get_template_directory_uri()."/js/main.js", array('jquery'), 1.0, true);
 	wp_enqueue_script("fontawesome", 'https://kit.fontawesome.com/a6b14e980f.js');
 }
 

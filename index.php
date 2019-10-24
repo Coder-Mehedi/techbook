@@ -41,45 +41,12 @@
 	// Approach Section
 	$approach_text = get_field('approach_text', 'option');
 
-	// Contact Section
-	$contact_number = get_field('contact_number', 'option');
-	$email = get_field('contact_email', 'option');
-	$address = get_field('contact_address', 'option');
+	
 ?>
 
 
-<!DOCTYPE html>
-<html ⚡ lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<title>Techbook</title>
-<link href="" rel="stylesheet">
+<?php get_header(); ?>
 
-<?php wp_head() ?>
-</head>
-<body>
-	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light">
-		  	<a class="navbar-brand logo" href="#">
-		  		<img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="">
-		  	</a>
-		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    	<span class="navbar-toggler-icon"></span>
-		  	</button>
-
-		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    	<ul class="navbar-nav mr-auto">
-		      	<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-		      	<li class="nav-item"><a class="nav-link" href="#">meet the founder</a></li>
-		      	<li class="nav-item"><a class="nav-link" href="#">services</a></li>
-		      	<li class="nav-item"><a class="nav-link" href="#">approach</a></li>
-		      	<li class="nav-item"><a class="nav-link" href="#">blog</a></li>
-		      	<li class="nav-item"><a class="nav-link" href="#">contact</a></li>
-		    	</ul>
-		  	</div>
-		</nav>
-	</div>
 		<div class="header_section">
 			<img src="<?php echo get_template_directory_uri() ?>/images/ellipse1.png" class="img1" alt="">
 			<img src="<?php echo get_template_directory_uri() ?>/images/ellipse3.png" class="img3" alt="">
@@ -184,7 +151,7 @@
 					<div class="col-md-7 mt-100">
 						<h5>Founder’s Thoughts</h5>
 						<hr>
-						<h6>— popular articles</h6>
+						<h6>— Latest articles</h6>
 					</div>
 					<?php if ( have_posts() ):
 						while ( have_posts() ): the_post(); ?>
@@ -195,7 +162,9 @@
 						    	<h5 class="card-title"><?php the_title(); ?></h5>
 						    	<span><?php the_time() ?></span><span><?php the_date(); ?></span>
 						    	<button class="bg1">SERVICES</button>
-						    	<button class="bg2">SERVICES</button>
+						    	<a href="<?php the_permalink(); ?>">
+						    		<button class="bg2">SERVICES</button>
+						    	</a>
 						  	</div>
 						</div>
 					</div>
@@ -204,23 +173,4 @@
 			</div>
 		</section>
 
-		<footer>
-			<img src="<?php echo get_template_directory_uri() ?>/images/footer1.png" class="footerimg1" alt="">
-			<img src="<?php echo get_template_directory_uri() ?>/images/footer2.png" class="footerimg2" alt="">
-			<img src="<?php echo get_template_directory_uri() ?>/images/footer3.png" class="footerimg3" alt="">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h3>Contact Details</h3>
-						<p><?php echo $contact_number ? $contact_number : ''; ?></p>
-						<p><?php echo $email ? $email : ''; ?><br>
-							<?php echo $address ? $address : ''; ?>
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-
-	<?php wp_footer() ?>
-</body>
+<?php get_footer() ?>

@@ -1,1 +1,18 @@
-$(".pct").length&&(window.pageYOffset<=0?$(".pct").addClass("none"):$(".pct").removeClass("none"),$(".pct").html(parseInt(window.pageYOffset/($(document).height()-window.innerHeight)*100))),window.pageYOffset>0?
+
+jQuery(window).scroll(function() {
+	if(jQuery(window).scrollTop() > 50) {
+		jQuery('.header').addClass('fix');
+	}
+	else {
+		jQuery('.header').removeClass('fix');
+	}
+});
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
