@@ -3,15 +3,16 @@ require_once('acf_query.php');
 function techbook_enqueue_assets(){
 	//css enqueue
 	wp_enqueue_style("bootstrap", get_template_directory_uri()."/css/bootstrap.min.css",array(), '4.3.1', 'all');
+    wp_enqueue_style("fontawesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
 
 	wp_enqueue_style("google-fonts", "https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
 
 	wp_enqueue_style("style", get_stylesheet_uri());
 
   //javascript enqueue
-	wp_enqueue_script("bootstrap", get_template_directory_uri()."/js/bootstrap.min.js",array('jquery'), 1.0, true);
+	wp_enqueue_script("bootstrap", get_template_directory_uri()."/js/bootstrap.min.js",array('jquery'), 1.0, true);	
 	wp_enqueue_script("customjs", get_template_directory_uri()."/js/main.js", array('jquery'), 1.0, true);
-	wp_enqueue_script("fontawesome", 'https://kit.fontawesome.com/a6b14e980f.js');
+	
 }
 
 add_action("wp_enqueue_scripts", "techbook_enqueue_assets");
@@ -29,7 +30,8 @@ function food_funday_restaurant_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'techbook' ),
+		'menu-1' => esc_html__( 'English', 'techbook' ),
+		'menu-2' => esc_html__( 'Arabic', 'techbook' ),
 	) );
 
 	add_theme_support( 'html5', array(
@@ -152,3 +154,10 @@ if( function_exists('acf_add_options_page') ) {
 	
 	
 }
+
+
+if(isset($_POST['arabic'])) {
+	$lang = 'ar';
+	
+}
+
